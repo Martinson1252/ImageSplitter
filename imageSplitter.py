@@ -4,15 +4,19 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.core.window import Window
-from threading import Thread
+from threading import Thread, Lock
+from time import sleep
+
 
 class MainWidget(Widget):
     startB = ObjectProperty(None)
     cropVal = ObjectProperty(None)
     progressB = ObjectProperty(None)
     proc = ObjectProperty(None)
+    
     def start(self):
-        self.c = 0
+        self.cropped = 0
+        #self.lock = Lock()
         try:
             if float(self.cropVal.text) > 1 or float(self.cropVal.text) < 0: return
         except:
@@ -31,7 +35,7 @@ class MainWidget(Widget):
             self.startB.text = "Stop"
         elif self.startB.text == "Stop":
             self.startB.text = "Start"
-            self.c = self.all_filesnumber 
+            self.cropped = self.all_filesnumber 
 
         divisior = 10
         parts = self.all_filesnumber/divisior
@@ -46,7 +50,7 @@ class MainWidget(Widget):
             partsL[part].append(i)
             im_num += 1 
 
-
+        
         
         
         r = 0
@@ -54,6 +58,7 @@ class MainWidget(Widget):
             print(r)
             t = Thread(target = lambda: ImageSplitter.Split(self,partsL[r]))
             t.start()
+            #t.join()
             r+=1
             
         #ImageSplitter.C(self)
@@ -76,10 +81,7 @@ class ImageSplitter(App):
         return MainWidget()
     App.crop_ratio = 0.0
 
-    def C(self):
-        c = 7
-        self.ids.progressB.value = c/self.all_filesnumber
-        self.ids.proc.text = str(round(c/self.all_filesnumber*100))+"%"
+  
 
     def Split(self,img_list):
 
@@ -89,7 +91,9 @@ class ImageSplitter(App):
         
         for f in img_list:
 
-            
+            #self.lock.acquire()
+            #cropped_images = self.cropped
+            if self.cropped >= self.all_filesnumber: return
             image = cv2.imread(os.path.join("source",f))
             height,width,channels = image.shape
             crop_imageR = image 
@@ -113,15 +117,20 @@ class ImageSplitter(App):
             w=width
             crop_imageR = crop_imageR[height_begin:h, width_begin:w]
             cv2.imwrite(os.path.join("cropped",name),crop_imageR)
-            self.c +=1
+            self.cropped +=1
+            #cropped_images +=1
+            #sleep(0.0000001)
+            #self.cropped = cropped_images
+            #self.lock.release()
             #print("image "+f+" ready")
             
     def ChangeBar(self):
-        while self.c < self.all_filesnumber:
-            self.ids.progressB.value = self.c/self.all_filesnumber
-            self.ids.proc.text = str(round(self.c/self.all_filesnumber*100))+"%"
+        while self.cropped < self.all_filesnumber:
+            self.ids.progressB.value = self.cropped/self.all_filesnumber
+            self.ids.proc.text = str(round(self.cropped/self.all_filesnumber*100))+"%"
         self.ids.progressB.value = 0
         self.ids.proc.text = ""
+        self.startB.text = "Start"
 ImageSplitter().run()
 
 
