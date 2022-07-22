@@ -1,0 +1,39 @@
+
+<MainWidget>:
+    startB: startB
+    cropVal:cropVal
+    progressB:progressB
+    proc:proc    
+    Label:
+        pos: (root.width/2)-50,(root.height/2)+110
+        text: "This program splits images vertically into 2 parts.\nThe place of the split is defined by user's ratio input."
+        color: .7,.7,.7,1
+    Button:
+        id: startB
+        size: 100,50
+        pos: (root.width/2)-50,(root.height/2)+60
+        background_color: (.9,.9,1,1)
+        text: "Start"
+        on_press: root.start()
+    Label:
+        pos: (root.width/2)-50,(root.height/2)-11
+        text: "Images ratio (0,1):"
+        color: .7,.7,.7,1
+    TextInput:
+        id:cropVal
+        size: 100,50
+        pos: (root.width/2)-50,(root.height/2)-20
+        background_color: (0.33,0.33,0.33,1)
+    Label:
+        pos: (root.width/2)-50,(root.height/2)-122
+        text: ""
+        id: proc
+        color: .7,.7,.7,1
+    ProgressBar:
+        id: progressB
+        size_hint_x: 220
+        pos: (root.width/2)-50,(root.height/2)-140
+        min:0
+        max:1
+    
+    
