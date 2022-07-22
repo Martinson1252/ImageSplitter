@@ -11,8 +11,9 @@ Apart that cv2 and kivy library has been used in this project.
 
 ## Great for splitting scans
 <p float="left">
-<img src="https://user-images.githubusercontent.com/39278140/180534508-1e9c3a23-dfa3-4f39-879d-2973cb863dfc.png" height="450" width="600"  />
+<img src="https://user-images.githubusercontent.com/39278140/180551386-86e4cb95-188a-4c50-bab3-011ab4c96435.png" height="450" width="600"  />
 </p>
+
 
 
 
