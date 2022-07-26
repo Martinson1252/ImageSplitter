@@ -73,7 +73,7 @@ class ImageSplitter(App):
     def build(self):
         
         Window.size = (400, 400)
-        Window.clearcolor = (0.2, 0.2, 0.2, 1)
+        Window.clearcolor = (43/255, 43/255, 43/255, 1)
         if not os.path.isdir("source"):
             os.mkdir("source")
         if not os.path.isdir("cropped"):
