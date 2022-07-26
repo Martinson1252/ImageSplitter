@@ -18,11 +18,12 @@
         on_press: root.start()
     Label:
         pos: (root.width/2)-50,(root.height/2)-99
-        text: "Images ratio (0,1):"
+        text: "Images ratio (from 0 to 1):"
         color: .7,.7,.7,1
     TextInput:
         id:cropVal
         size: 100,50
+        hint_text: 'e.g. 0.54'
         pos: (root.width/2)-50,(root.height/2)-115
         foreground_color: (185/255,185/255,185/255,1)
         background_color: (55/255,55/255,55/255,1)
