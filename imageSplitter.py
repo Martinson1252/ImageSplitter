@@ -6,14 +6,15 @@ from kivy.properties import ObjectProperty
 from kivy.core.window import Window
 from threading import Thread, Lock
 from time import sleep
-
+from kivymd.app import MDApp
 
 class MainWidget(Widget):
     startB = ObjectProperty(None)
     cropVal = ObjectProperty(None)
     progressB = ObjectProperty(None)
     proc = ObjectProperty(None)
-    
+    infoText = ObjectProperty(None)
+
     def start(self):
         self.cropped = 0
         #self.lock = Lock()
@@ -69,9 +70,10 @@ class MainWidget(Widget):
         
         #ImageSplitter.Split(self)
 
-class ImageSplitter(App):
+class ImageSplitter(MDApp):
     def build(self):
-        
+        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.primary_palette = "Teal"
         Window.size = (400, 400)
         Window.clearcolor = (43/255, 43/255, 43/255, 1)
         if not os.path.isdir("source"):
@@ -80,7 +82,8 @@ class ImageSplitter(App):
             os.mkdir("cropped")
         return MainWidget()
     App.crop_ratio = 0.0
-
+    def con():
+        print("HAAH")
   
 
     def Split(self,img_list):

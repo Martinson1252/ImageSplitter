@@ -1,30 +1,37 @@
 
+
+
 <MainWidget>:
     startB: startB
     cropVal:cropVal
     progressB:progressB
-    proc:proc    
+    proc:proc
+    infoText:infoText
+
     Label:
-        pos: (root.width/2)-50,(root.height/2)+80
+        id: infoText
+        pos: (root.width/2)-root.infoText.width/2,(root.height/2)+80
         text: "This program splits images vertically into 2 parts.\nThe place where the single image is split,\nis defined by user's ratio input.\n\nProgram creates 2 folders: source and cropped.\nIn source folder user has to manually move all images,\nwheras cropped folder is use to store cropped images."
         color: .7,.7,.7,1
-    Button:
+    MDRaisedButton:
         id: startB
-        size: 100,50
-        pos: (root.width/2)-50,(root.height/2)-20
-        background_color: (100/255,0/255,130/255,1)
-        background_normal: ""
+        pos: (root.width/2)-root.startB.width/2,(root.height/2)-20
+        width: dp(250)
+        #background_color: (100/255,0/255,130/255,1)
+        #background_normal: ""
         text: "Start"
         on_press: root.start()
     Label:
         pos: (root.width/2)-50,(root.height/2)-99
         text: "Images ratio (from 0 to 1):"
         color: .7,.7,.7,1
-    TextInput:
+    MDTextField:
         id:cropVal
-        size: 100,50
+        mode: "rectangle"
+        helper_text: "type value here"
+        helper_text_mode: "persistent"
         hint_text: 'e.g. 0.54'
-        pos: (root.width/2)-50,(root.height/2)-115
+        pos: (root.width/2)-root.cropVal.width/2,(root.height/2)-115
         foreground_color: (185/255,185/255,185/255,1)
         background_color: (55/255,55/255,55/255,1)
     Label:
@@ -32,12 +39,13 @@
         text: ""
         id: proc
         color: .7,.7,.7,1
-    ProgressBar:
+    MDProgressBar:
         id: progressB
-        size_hint_x: 220
+        padding: "18dp"
         pos: (root.width/2)-50,(root.height/2)-220
         min:0
         max:1
+        
 
         
     
