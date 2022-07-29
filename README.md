@@ -20,7 +20,11 @@ Project uses libraries such as cv2 and kivy.
 
 
 
-https://user-images.githubusercontent.com/39278140/181267051-568a5802-619a-4e5b-952d-05ffb3dbd1cd.mp4
+https://user-images.githubusercontent.com/39278140/181821572-fe63ecf4-857f-41f9-9b09-8436ac0cc066.mp4
+
+
+
+
 
 
 
