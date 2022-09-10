@@ -22,11 +22,6 @@ Project uses libraries such as cv2 and kivy.
 
 https://user-images.githubusercontent.com/39278140/181821572-fe63ecf4-857f-41f9-9b09-8436ac0cc066.mp4  
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/MUQfKFzIOeU" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
 
 
 
