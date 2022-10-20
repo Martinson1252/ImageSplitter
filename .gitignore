@@ -1,4 +1,6 @@
-.vscode/**
-build/**
-dist/**
-__pycache__/**
+/root/
+    .gitignore
+    /.vscode/
+    /dist/
+    /build/
+    /__pycache__/
