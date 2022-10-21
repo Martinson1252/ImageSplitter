@@ -19,9 +19,13 @@ Also there is a version that uses kivy instead pyqt5 and its located in `kivy` f
 
 
 
+Pyqt5 version is compiled in ``
+https://user-images.githubusercontent.com/39278140/197249345-caf8966d-83cb-4b3f-9a20-53caef076aae.mp4
 
 
 
+
+Kivy version:
 https://user-images.githubusercontent.com/39278140/181821572-fe63ecf4-857f-41f9-9b09-8436ac0cc066.mp4  
 
 
