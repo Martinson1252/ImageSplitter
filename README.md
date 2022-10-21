@@ -5,7 +5,8 @@ Program creates 2 folders: source and cropped.
 In source folder user has to manually move all images,  
 wheras cropped folder is used to store cropped images.  
 Program uses multiple threads to complete the task.  
-Project uses libraries such as cv2 and pyqt5. 
+Project uses libraries such as cv2 and pyqt5.  
+Compiled version is in stored in `dist/ImageSplitter`  
 
 Also there is a version that uses kivy instead pyqt5 and its located in `kivy` folder.
 
@@ -18,13 +19,13 @@ Also there is a version that uses kivy instead pyqt5 and its located in `kivy` f
 
 
 
-
+Pyqt5 version:
 
 https://user-images.githubusercontent.com/39278140/197249345-caf8966d-83cb-4b3f-9a20-53caef076aae.mp4
 
 
 
-
+Kivy version:
 
 https://user-images.githubusercontent.com/39278140/181821572-fe63ecf4-857f-41f9-9b09-8436ac0cc066.mp4  
 
