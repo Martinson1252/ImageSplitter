@@ -1,4 +1,4 @@
-/*
-    !/kivy
-    !splitter.py
-    !backend.py
+dist/
+build/
+.vscode/
+__pycache__/
