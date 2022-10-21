@@ -7,7 +7,7 @@ wheras cropped folder is used to store cropped images.
 Program uses multiple threads to complete the task.  
 Project uses libraries such as cv2 and pyqt5. 
 
-Also there is a version that uses kivy instead pyqt5 and its located in *kivy* folder.
+Also there is a version that uses kivy instead pyqt5 and its located in **kivy** folder.
 
 
 
