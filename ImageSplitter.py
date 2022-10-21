@@ -30,9 +30,9 @@ class MainWindow(QMainWindow):
         #validation_rule = QDoubleValidator(0.001,0.9999,12)
         #validation_rule.validate(str(self.scaleValue),12)
         #self.insertField.setValidator(validation_rule)
-        self.insertField.setGeometry(QtCore.QRect(self.GetHalf(80),200,80,30))
+        self.insertField.setGeometry(QtCore.QRect(self.GetHalf(80),205,80,30))
         self.insertField.textEdited[str].connect(lambda: self.InputChange(self.insertField.text()))
-        
+
         #button to start process
         self.startButton = QPushButton(self)
         self.startButton.setGeometry(QtCore.QRect(self.GetHalf(100),250,100,30))

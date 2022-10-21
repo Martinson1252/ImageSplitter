@@ -17,7 +17,7 @@ class BackendClass:
     def start(self,ui):
         #self.lock = Lock()
         
-        
+        ui.insertField.setText(ui.insertField.text().replace(",","."))
         try:
             self.crop_ratio = float(ui.insertField.text())
         except:
@@ -38,6 +38,7 @@ class BackendClass:
         if img_list.count == 0: return
         if ui.startButton.text() == "Start":
             ui.startButton.setText("Stop")
+            ui.progressBar.setVisible(True)
         elif ui.startButton.text() == "Stop":
             ui.startButton.setText("Start")
             self.cropped = self.all_filesnumber
@@ -136,4 +137,4 @@ class BackendClass:
         ui.startButton.setText("Start")
         self.all_filesnumber = 0
         self.cropped = 0
-        self.progressBar.setVisible(False)
+        ui.progressBar.setVisible(False)

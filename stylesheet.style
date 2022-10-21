@@ -8,7 +8,7 @@ QWidget{
        
         QLineEdit{
         background-color: #575654;
-        border-style: outset;
+        border-style: none;
         border-width: 4px;
         border-color: #141413;
         border-radius: 5px;
