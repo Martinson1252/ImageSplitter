@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         #text for info
         self.infoLabel = QLabel(self)
         self.infoLabel.setGeometry(QtCore.QRect(self.GetHalf(340),15,340,170))
-        self.infoLabel.setText("This program splits images vertically into 2 parts.\nThe place where the single image is split,\nis defined by user's ratio input.\nProgram creates 2 folders: source and cropped.\nIn source folder user has to manually move all\nimages, wheras cropped folder is use to store\ncropped images. Ratio input value is a fraction\n(eg. 0.33) ")
+        self.infoLabel.setText("This program splits images vertically into 2 separate\nparts. The spot where a single image will be splitted,\nis defined by user's ratio input.\nProgram creates 2 folders: source and cropped.\nUser has to manually move all images to the source\nfolder, wheras cropped folder is used to store\ncropped images. Ratio input value is a fraction\n(eg. 0.33) ")
         
         #hint for ration input
         self.ratioHint = QLabel(self)
