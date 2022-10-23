@@ -2,13 +2,13 @@
 It's a simple program that splits images vertically into 2 parts.  
 The spot where a single image will be is splitted, is defined by user's ratio input.  
 Program creates 2 folders: **source** and **cropped**.  
-User has to manually move all images to the source folder ,  
+User has to manually move all images to the source folder,  
 wheras cropped folder is used to store cropped images.  
 Program uses multiple threads to complete the task.  
 Project uses libraries such as cv2 and pyqt5.  
 Compiled version is stored in `dist/ImageSplitter.exe`  
 
-Also there is a version that uses kivy instead pyqt5 and is located in `kivy` folder,  
+Also there is a version that uses kivy instead of pyqt5 and is located in `kivy` folder,  
 however this version is not compiled.
 
 
