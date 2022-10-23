@@ -1,5 +1,6 @@
 from backend import BackendClass 
 import sys
+from stylesheet import style
 from tokenize import Double
 from turtle import down
 from PyQt5.QtWidgets import (QApplication, QLabel, QLineEdit,QVBoxLayout, QWidget,QMainWindow,QPushButton,QProgressBar)
@@ -57,9 +58,7 @@ class MainWindow(QMainWindow):
     
     
 if __name__=="__main__":
-    style = ""
-    with open("stylesheet.style","r") as file:
-        style = (file.read())
+    style = style
     app = QApplication(sys.argv)
     window = MainWindow()
     window.setWindowTitle("ImageSplitter")
