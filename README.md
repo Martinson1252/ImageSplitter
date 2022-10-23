@@ -8,8 +8,8 @@ Program uses multiple threads to complete the task.
 Project uses libraries such as cv2 and pyqt5.  
 Compiled version is stored in `dist/ImageSplitter.exe`  
 
-Also there is a version that uses kivy instead pyqt5 and its located in `kivy` folder,  
-however that version is not compiled.
+Also there is a version that uses kivy instead pyqt5 and is located in `kivy` folder,  
+however this version is not compiled.
 
 
 
