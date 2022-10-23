@@ -1,5 +1,5 @@
 # ImageSplitter  
-It's a simple program that splits images vertically into 2 parts.  
+It's a simple program that splits images vertically into 2 separate images.  
 The spot where a single image will be is splitted, is defined by user's ratio input.  
 Program creates 2 folders: **source** and **cropped**.  
 User has to manually move all images to the source folder,  
