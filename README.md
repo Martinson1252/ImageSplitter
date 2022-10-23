@@ -15,7 +15,7 @@ however this version is not compiled.
 
 ## Great for splitting scans
 
-Program splits ech image into 2 separate images, according to user's ratio input.
+Program splits each image into 2 separate images, according to user's ratio input.
 
 <p float="left">
 <img src="https://user-images.githubusercontent.com/39278140/180551386-86e4cb95-188a-4c50-bab3-011ab4c96435.png" height="450" width="600"  />
