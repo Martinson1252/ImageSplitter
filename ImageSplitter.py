@@ -10,7 +10,7 @@ from PyQt5.QtGui import QCursor,QDoubleValidator,QValidator
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.window().resize(400,400)
+        self.window().setFixedSize(400,400)
         self.scaleValue = 0.0
         self.InitGUI()
         self.backend = BackendClass(self)
