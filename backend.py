@@ -1,3 +1,4 @@
+import threading
 from PyQt5.QtWidgets import (QApplication, QLabel, QLineEdit,QVBoxLayout, QWidget,QMainWindow,QPushButton,QProgressBar,QMessageBox,QDialog)
 from threading import Thread
 import cv2,os
@@ -121,7 +122,10 @@ class BackendClass:
             w=width
             crop_imageR = crop_imageR[height_begin:h, width_begin:w]
             cv2.imwrite(os.path.join("cropped",name),crop_imageR)
+            threadLock = threading.Lock()
+            threadLock.acquire()
             self.cropped +=1
+            threadLock.release()
             #cropped_images +=1
             #sleep(0.0000001)
             #self.cropped = cropped_images
