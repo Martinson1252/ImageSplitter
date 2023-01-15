@@ -23,13 +23,20 @@ Program splits each image into 2 separate images, according to user's ratio inpu
 
 
 
-Pyqt5 version:
+## Examples  
+In these examples program precesses 600 images and splits them into 1200.  
+It uses 10 threads to complete the task.  
+
+
+
+
+* ### **Pyqt5 version:**
 
 https://user-images.githubusercontent.com/39278140/197249345-caf8966d-83cb-4b3f-9a20-53caef076aae.mp4
 
 
 
-Kivy version:
+* ### **Kivy version:**
 
 https://user-images.githubusercontent.com/39278140/181821572-fe63ecf4-857f-41f9-9b09-8436ac0cc066.mp4  
 
